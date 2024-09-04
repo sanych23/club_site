@@ -10,4 +10,5 @@ class CreateProjectDTO:
     author_role: str
     deadline: str
     author_id: int
-
+    categories: list
+    stacks: list

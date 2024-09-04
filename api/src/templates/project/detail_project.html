@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Описание проектов{% endblock %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h1>Проект - {{ project.name }}, aвтора {{ project.author }}</h1>
+        <strong>Роль автора: {{ project.author_role }}</strong><br>
+        Категория: 
+        {% for category in project.categories.all %}
+            <strong>{{ category.name }}; </strong>
+        {% endfor %}
+        <br>
+        Стек: 
+        {% for stack in projects.stacks.all %}
+            <strong>{{ stack.name }}; </strong>
+        {% endfor %}
+        <br>
+        <strong>Статус: {{ project.status }}</strong><br>
+        <strong>Создан: {{ project.created_at }}</strong><br>
+        <strong>Дата завершения: {{ project.deadline }}</strong><br>
+        {% if project.closed_at %}
+            <strong>
+                Дата закрытия: {{ project.closed_at }}
+            </strong>
+        {% endif %}<br>
+        <p>{{ project.description }}</p>
+        <br>
+        <p>
+            <a href="{{project.repo_link}}">Репозиторий проекта</a>
+        </p>
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
+    
+
+{% endblock %}

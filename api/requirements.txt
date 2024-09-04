@@ -9,3 +9,4 @@ psycopg2-binary==2.9.9
 pycodestyle==2.12.1
 sqlparse==0.5.1
 tzdata==2024.1
+django-silk==5.1.0

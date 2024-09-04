@@ -26,3 +26,5 @@ urlpatterns = [
     path('project/', include('project.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]
+
+urlpatterns += [path('silk/', include('silk.urls', namespace='silk'))]

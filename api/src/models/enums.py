@@ -16,3 +16,14 @@ class Role(models.TextChoices):
     QA = 'QA', 'Qa'
     PM = 'PM', 'Pm'
     OTHER = 'OTHER', 'Other'
+
+class Grade(models.TextChoices):
+    INTERN = 'INTERN', 'Intern'
+    JUNIOR = 'JUNIOR', 'Junior'
+    JUNIOR_PLUS = 'JUNIOR_PLUS', 'Junior+'
+    MIDDLE = 'MIDDLE', 'Middle'
+    MIDDLE_PLUS = 'MIDDLE_PLUS', 'Middle+'
+    SENIOR = 'SENIOR', 'Senior'
+    SENIOR_PLUS = 'SENIOR_PLUS', 'Senior+'
+    LEAD = 'LEAD', 'Lead'
+

@@ -16,6 +16,7 @@ class Project(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='projects')
     categories = models.ManyToManyField('Category', related_name='projects')
     stacks = models.ManyToManyField('Stack', related_name='projects')
+    # vacancies = models.ManyToManyField('ProjectVacancy', related_name='projects', through='ProjectVacancy')
 
     def __str__(self):
         return self.name

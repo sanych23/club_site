@@ -12,5 +12,5 @@ class ModelsConfig(AppConfig):
         from models.stack import Stack
         # from .category import Category
         # from .stack import Stack
-        # from .vacancy import ProjectVacancy
+        from models.vacancy import ProjectVacancy
 
